@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Dosis";
+  src: url("/assets/fonts/Dosis-SemiBold.otf");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato-Regular.ttf");
+}
+html {
+  background: url('/assets/img/bg-gradient.png') no-repeat top center;
+  height: 100%;
+}
+body {
+  background: url('/assets/img/bg-mesh.png') no-repeat top center;
+  min-height: 100%;
+  margin: 0;
+}
+.link:hover {
+  text-decoration: underline !important;
+}
+.navbar {
+  background-color: #333333;
+  border: none;
+}
+.navbar .navbar-brand {
+  color: #ff0031 !important;
+  font-family: Dosis;
+  font-size: 18pt;
+}
+.navbar .navbar-text {
+  padding: 15px 0;
+  margin: 0;
+  line-height: 20px;
+  font-size: 18pt;
+  font-family: Dosis;
+}
+.navbar .navbar-text a {
+  color: #ffe000 !important;
+  font-family: Dosis;
+}
+.navbar .navbar-text .separator {
+  display: inline-block;
+  width: 30px;
+}

@@ -1,0 +1,79 @@
+// variables
+
+@black: #333333;
+@yellow: #FFE000;
+@orange1: #FF9510;
+@orange2: #FF4B21;
+@red: #FF0031;
+
+@font-face {
+  font-family: "Dosis";
+  src: url("/assets/fonts/Dosis-SemiBold.otf");
+}
+@dosis: Dosis;
+
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato-Regular.ttf");
+}
+@lato: Lato;
+
+// generic
+
+html {
+  background: url('/assets/img/bg-gradient.png') no-repeat top center;
+  height: 100%;
+}
+
+body {
+  background: url('/assets/img/bg-mesh.png') no-repeat top center;
+  min-height: 100%;
+  margin: 0;
+}
+
+.link {
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+// header
+
+.navbar {
+  background-color: @black;
+  border: none;
+  .navbar-brand {
+    color: @red !important;
+    font-family: @dosis;
+    font-size: 18pt;
+  }
+  .navbar-text {
+    padding: 15px 0;
+    margin: 0;
+    line-height: 20px;
+    font-size: 18pt;
+    font-family: @dosis;
+    a {
+      color: @yellow !important;
+      font-family: @dosis;
+    }
+    .separator {
+      display: inline-block;
+      width: 30px;
+    }
+  }
+}
+
+// body
+
+.features {
+  .feature {
+
+  }
+}
+
+// footer
+
+.footer {
+
+}

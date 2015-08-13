@@ -1,0 +1,6 @@
+{
+  "name": "mantl",
+  "dependencies": {
+    "bootstrap": "~3.2"
+  }
+}
