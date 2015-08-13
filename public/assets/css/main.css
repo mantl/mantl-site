@@ -1,19 +1,32 @@
 @font-face {
   font-family: "Dosis";
-  src: url("/assets/fonts/Dosis-SemiBold.otf");
+  src: url("../fonts/Dosis-SemiBold.otf");
 }
 @font-face {
   font-family: "Lato";
-  src: url("/assets/fonts/Lato-Regular.ttf");
+  src: url("../fonts/Lato-Regular.ttf");
 }
 html {
-  background: url('/assets/img/bg-gradient.png') no-repeat top center;
+  background: url('../img/bg-gradient.png') no-repeat top center;
   height: 100%;
 }
 body {
-  background: url('/assets/img/bg-mesh.png') no-repeat top center;
+  background: url('../img/bg-mesh.png') no-repeat top center;
   min-height: 100%;
   margin: 0;
+}
+body > .container {
+  padding-top: 150px;
+}
+@media (min-width: 768px) {
+  body > .container {
+    padding-top: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 970px !important;
+  }
 }
 .link:hover {
   text-decoration: underline !important;
@@ -41,4 +54,53 @@ body {
 .navbar .navbar-text .separator {
   display: inline-block;
   width: 30px;
+}
+h2 {
+  font-family: Dosis;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.introduction {
+  text-align: center;
+  margin-top: 25px;
+}
+.polygons .polygon h3 {
+  font-family: Lato;
+  color: #ffe000;
+  font-size: 28pt;
+  margin-bottom: 20px;
+}
+.polygons .polygon p {
+  font-family: Lato;
+  color: #ffffff;
+  font-size: 13pt;
+}
+.polygons .polygon.polygon-1 {
+  background: url('../img/polygon-1.png') no-repeat;
+  width: 728px;
+  height: 437px;
+  margin-top: 630px;
+  margin-left: 115px;
+}
+.polygons .polygon.polygon-1 h3 {
+  padding-top: 60px;
+  padding-left: 80px;
+}
+.polygons .polygon.polygon-1 p {
+  padding-left: 80px;
+  width: 650px;
+}
+.polygons .polygon.polygon-2 {
+  background: url('../img/polygon-2.png') no-repeat;
+  width: 480px;
+  height: 481px;
+  margin-left: 70px;
+}
+.polygons .polygon.polygon-2 h3 {
+  padding-top: 60px;
+  padding-left: 120px;
+}
+.polygons .polygon.polygon-2 p {
+  padding-left: 80px;
+  width: 400px;
 }

@@ -1,6 +1,7 @@
 // variables
 
 @black: #333333;
+@white: #FFFFFF;
 @yellow: #FFE000;
 @orange1: #FF9510;
 @orange2: #FF4B21;
@@ -8,27 +9,40 @@
 
 @font-face {
   font-family: "Dosis";
-  src: url("/assets/fonts/Dosis-SemiBold.otf");
+  src: url("../fonts/Dosis-SemiBold.otf");
 }
 @dosis: Dosis;
 
 @font-face {
   font-family: "Lato";
-  src: url("/assets/fonts/Lato-Regular.ttf");
+  src: url("../fonts/Lato-Regular.ttf");
 }
 @lato: Lato;
 
 // generic
 
 html {
-  background: url('/assets/img/bg-gradient.png') no-repeat top center;
+  background: url('../img/bg-gradient.png') no-repeat top center;
   height: 100%;
 }
 
 body {
-  background: url('/assets/img/bg-mesh.png') no-repeat top center;
+  background: url('../img/bg-mesh.png') no-repeat top center;
   min-height: 100%;
   margin: 0;
+}
+
+body > .container {
+  @media (min-width: 768px) {
+    padding-top: 80px;
+  }
+  padding-top: 150px;
+}
+
+.container {
+  @media (min-width: 1200px) {
+    width: 970px !important;
+  }
 }
 
 .link {
@@ -66,9 +80,59 @@ body {
 
 // body
 
-.features {
-  .feature {
+h2 {
+  font-family: @dosis;
+  color: @white;
+  text-transform: uppercase;
+}
 
+.introduction {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.polygons {
+  .polygon {
+    h3 {
+      font-family: @lato;
+      color: @yellow;
+      font-size: 28pt;
+      margin-bottom: 20px;
+    }
+    p {
+      font-family: @lato;
+      color: @white;
+      font-size: 13pt;
+    }
+    &.polygon-1 {
+      background: url('../img/polygon-1.png') no-repeat;
+      width: 728px;
+      height: 437px;
+      margin-top: 630px;
+      margin-left: 115px;
+      h3 {
+        padding-top: 60px;
+        padding-left: 80px;
+      }
+      p {
+        padding-left: 80px;
+        width: 650px;
+      }
+    }
+    &.polygon-2 {
+      background: url('../img/polygon-2.png') no-repeat;
+      width: 480px;
+      height: 481px;
+      margin-left: 70px;
+      h3 {
+        padding-top: 60px;
+        padding-left: 120px;
+      }
+      p {
+        padding-left: 80px;
+        width: 400px;
+      }
+    }
   }
 }
 
