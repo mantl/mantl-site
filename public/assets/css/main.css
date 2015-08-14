@@ -187,7 +187,8 @@ h2 {
   margin-bottom: 40px;
 }
 .links .btn {
-  padding: 20px 32px;
+  padding: 20px;
+  width: 178px;
   background-color: #333333;
   border: none !important;
   font-family: Dosis;
