@@ -155,6 +155,7 @@ h2 {
       }
       img {
         padding-left: 80px;
+        max-width: 100%;
       }
     }
     &.polygon-4 {
@@ -211,10 +212,11 @@ h2 {
     font-family: @dosis;
     color: @red;
     text-transform: uppercase;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   .btn {
     padding: 20px;
+    margin-top: 20px;
     width: 178px;
     background-color: @black;
     border: none !important;
@@ -233,6 +235,9 @@ h2 {
   .separator {
     display: inline-block;
     width: 30px;
+    @media (max-width: 420px) {
+      display: none;
+    }
   }
 }
 

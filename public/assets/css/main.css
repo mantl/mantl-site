@@ -127,6 +127,7 @@ h2 {
 }
 .polygons .polygon.polygon-3 img {
   padding-left: 80px;
+  max-width: 100%;
 }
 .polygons .polygon.polygon-4 {
   background: url('../img/polygon-4.png') no-repeat;
@@ -184,10 +185,11 @@ h2 {
   font-family: Dosis;
   color: #ff0031;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .links .btn {
   padding: 20px;
+  margin-top: 20px;
   width: 178px;
   background-color: #333333;
   border: none !important;
@@ -206,6 +208,11 @@ h2 {
 .links .separator {
   display: inline-block;
   width: 30px;
+}
+@media (max-width: 420px) {
+  .links .separator {
+    display: none;
+  }
 }
 .footer {
   margin-top: 120px;
