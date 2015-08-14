@@ -94,6 +94,7 @@ h2 {
   background: url('../img/polygon-2.png') no-repeat;
   width: 480px;
   height: 481px;
+  margin-top: -50px;
   margin-left: 70px;
 }
 .polygons .polygon.polygon-2 h3 {
@@ -103,6 +104,50 @@ h2 {
 .polygons .polygon.polygon-2 p {
   padding-left: 80px;
   width: 400px;
+}
+.polygons .polygon.polygon-3 {
+  background: url('../img/polygon-3.png') no-repeat;
+  width: 595px;
+  height: 520px;
+  margin-top: -110px;
+  margin-left: 320px;
+}
+.polygons .polygon.polygon-3 h3 {
+  padding-top: 90px;
+  padding-left: 130px;
+}
+.polygons .polygon.polygon-3 img {
+  padding-left: 80px;
+}
+.polygons .polygon.polygon-4 {
+  background: url('../img/polygon-4.png') no-repeat;
+  width: 575px;
+  height: 434px;
+  margin-top: -50px;
+  margin-left: 100px;
+}
+.polygons .polygon.polygon-4 h3 {
+  padding-left: 180px;
+  padding-top: 80px;
+}
+.polygons .polygon.polygon-4 p {
+  padding-left: 105px;
+  width: 485px;
+}
+.polygons .polygon.polygon-5 {
+  background: url('../img/polygon-5.png') no-repeat;
+  width: 498px;
+  height: 414px;
+  margin-top: -50px;
+  margin-left: 370px;
+}
+.polygons .polygon.polygon-5 h3 {
+  padding-left: 80px;
+  padding-top: 45px;
+}
+.polygons .polygon.polygon-5 p {
+  padding-left: 80px;
+  width: 425px;
 }
 .links {
   text-align: center;
@@ -135,19 +180,32 @@ h2 {
   width: 30px;
 }
 .footer {
-  background-color: #ffe000;
   margin-top: 120px;
   padding: 30px 30px 15px 30px;
   font-family: Lato;
   color: #333333;
-  left: 0;
-  right: 0;
+}
+.footer .separator-hr {
+  position: relative;
+  top: -25px;
+  margin: 0 auto;
+  border-top: 1px solid #333333;
 }
 .footer .subtitle {
   display: inline-block;
   position: relative;
   top: -3px;
+  text-transform: uppercase;
+  padding-left: 20px;
 }
 .footer .copyright {
+  position: relative;
+  top: -6px;
   text-align: right;
+}
+.footer .copyright a {
+  color: #ff0031;
+}
+.footer .copyright a:hover {
+  text-decoration: underline;
 }
