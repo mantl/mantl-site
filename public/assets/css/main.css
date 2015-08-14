@@ -149,6 +149,23 @@ h2 {
   padding-left: 80px;
   width: 425px;
 }
+@media (max-width: 768px) {
+  .polygons .polygon {
+    background: #333333 !important;
+    width: auto !important;
+    margin-left: auto !important;
+    margin-top: 20px !important;
+  }
+  .polygons .polygon h3,
+  .polygons .polygon p,
+  .polygons .polygon img {
+    padding-left: 20px !important;
+    padding-top: 20px !important;
+  }
+  .polygons .polygon p {
+    width: 100% !important;
+  }
+}
 .links {
   text-align: center;
   margin-top: 100px;
@@ -198,10 +215,26 @@ h2 {
   text-transform: uppercase;
   padding-left: 20px;
 }
+@media (max-width: 768px) {
+  .footer .subtitle {
+    display: block;
+    position: static;
+    top: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
+  }
+}
 .footer .copyright {
   position: relative;
   top: -6px;
   text-align: right;
+}
+@media (max-width: 768px) {
+  .footer .copyright {
+    position: static;
+    top: 0;
+    text-align: left;
+  }
 }
 .footer .copyright a {
   color: #ff0031;

@@ -178,6 +178,19 @@ h2 {
         width: 425px;
       }
     }
+    @media (max-width: 768px) {
+      background: @black !important;
+      width: auto !important;
+      margin-left: auto !important;
+      margin-top: 20px !important;
+      h3, p, img {
+        padding-left: 20px !important;
+        padding-top: 20px !important;
+      }
+      p {
+        width: 100% !important;
+      }
+    }
   }
 }
 
@@ -231,11 +244,23 @@ h2 {
     top: -3px;
     text-transform: uppercase;
     padding-left: 20px;
+    @media (max-width: 768px) {
+      display: block;
+      position: static;
+      top: 0;
+      padding-left: 0;
+      padding-bottom: 20px;
+    }
   }
   .copyright {
     position: relative;
     top: -6px;
     text-align: right;
+    @media (max-width: 768px) {
+      position: static;
+      top: 0;
+      text-align: left;
+    }
     a {
       color: @red;
       &:hover {
