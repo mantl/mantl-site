@@ -104,6 +104,36 @@ h2 {
   padding-left: 80px;
   width: 400px;
 }
+.links {
+  text-align: center;
+  margin-top: 100px;
+}
+.links h2 {
+  font-family: Dosis;
+  color: #ff0031;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.links .btn {
+  padding: 20px 32px;
+  background-color: #333333;
+  border: none !important;
+  font-family: Dosis;
+  font-size: 28pt;
+}
+.links .btn:hover {
+  text-decoration: underline;
+}
+.links .btn-github {
+  color: #ffe000;
+}
+.links .btn-docs {
+  color: #ff0031;
+}
+.links .separator {
+  display: inline-block;
+  width: 30px;
+}
 .footer {
   background-color: #ffe000;
   margin-top: 120px;
