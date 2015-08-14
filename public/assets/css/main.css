@@ -16,7 +16,7 @@ body {
   margin: 0;
 }
 body > .container {
-  padding-top: 150px;
+  padding-top: 80px;
 }
 @media (min-width: 768px) {
   body > .container {
@@ -98,6 +98,11 @@ h2 {
 .polygons .polygon.polygon-1 p {
   padding-left: 80px;
   width: 650px;
+}
+@media (max-width: 768px) {
+  .polygons .polygon.polygon-1 {
+    margin-top: 630px !important;
+  }
 }
 .polygons .polygon.polygon-2 {
   background: url('../img/polygon-2.png') no-repeat;
