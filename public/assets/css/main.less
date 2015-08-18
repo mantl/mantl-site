@@ -22,12 +22,18 @@
 // generic
 
 html {
-  background: url('../img/bg-gradient.png') no-repeat top center;
+  background: url('../img/mantl-bg-gradient.png') no-repeat top center;
+  background-size: 1000px 3500px;
   height: 100%;
+  @media (max-width: 768px) {
+    background: url('../img/mantl-bg-gradient.png') #ea2056 no-repeat top center;
+    background-size: 1000px 3500px;
+  }
 }
 
 body {
-  background: url('../img/bg-mesh.png') no-repeat top center;
+  background: url('../img/mantl-bg-mesh.png') no-repeat top center;
+  background-size: 2604px 3298px;
   min-height: 100%;
   margin: 0;
 }
@@ -51,11 +57,16 @@ body > .container {
   }
 }
 
+.caps {
+  text-transform: uppercase;
+}
+
 // header
 
 .navbar {
   background-color: @black;
   border: none;
+  height: 68px !important;
   @media (max-width: 768px) {
     .navbar-header {
       display: inline-block;
@@ -66,19 +77,41 @@ body > .container {
     }
   }
   .navbar-brand {
-    color: @red !important;
+    color: @yellow !important;
     font-family: @dosis;
     font-size: 18pt;
+    line-height: 150%;
   }
   .navbar-text {
     padding: 15px 0;
     margin: 0;
-    line-height: 20px;
+    line-height: 150%;
     font-size: 18pt;
     font-family: @dosis;
     a {
       color: @yellow !important;
       font-family: @dosis;
+      display: inline-block;
+      &.link-github {
+        background: url('../img/ico-github.png') no-repeat top right;
+        background-size: 37px 37px;
+        width: 120px;
+        height: 37px;
+        @media (max-width: 412px) {
+          background: none;
+          width: auto;
+        }
+      }
+      &.link-docs {
+        background: url('../img/ico-docs.png') no-repeat top right;
+        background-size: 37px 37px;
+        width: 96px;
+        height: 37px;
+        @media (max-width: 412px) {
+          background: none;
+          width: auto;
+        }
+      }
     }
     .separator {
       display: inline-block;
@@ -91,13 +124,17 @@ body > .container {
 
 h2 {
   font-family: @dosis;
-  color: @white;
+  color: @red;
   text-transform: uppercase;
 }
 
 .introduction {
   text-align: center;
-  margin-top: 25px;
+  margin-top: 50px;
+}
+
+.logo {
+  max-width: 100%;
 }
 
 .polygons {
@@ -115,81 +152,124 @@ h2 {
     }
     &.polygon-1 {
       background: url('../img/polygon-1.png') no-repeat;
-      width: 728px;
-      height: 437px;
-      margin-top: 630px;
+      background-size: 752px 552px;
+      width: 752px;
+      height: 552px;
+      margin-top: 30px;
       margin-left: 115px;
       h3 {
-        padding-top: 60px;
+        padding-top: 50px;
         padding-left: 80px;
       }
       p {
         padding-left: 80px;
         width: 650px;
+        &.paragraph-1 {
+          width: 70%;
+        }
+        &.paragraph-2 {
+          width: 64%;
+        }
+        &.paragraph-3 {
+          width: 44%;
+        }
       }
-      @media (max-width: 768px) {
-        margin-top: 630px !important;
+      img {
+        position: absolute;
+        left: 455px;
+        top: 193px;
+        @media (max-width: 768px) {
+          position: static;
+          max-width: 100%;
+        }
       }
     }
     &.polygon-2 {
       background: url('../img/polygon-2.png') no-repeat;
-      width: 480px;
-      height: 481px;
+      background-size: 500px 500px;
+      width: 500px;
+      height: 500px;
       margin-top: -50px;
-      margin-left: 70px;
+      margin-left: 25px;
       h3 {
         padding-top: 60px;
         padding-left: 120px;
       }
       p {
         padding-left: 80px;
-        width: 400px;
+        width: 462px;
       }
     }
     &.polygon-3 {
       background: url('../img/polygon-3.png') no-repeat;
-      width: 595px;
-      height: 520px;
+      background-size: 629px 562px;
+      width: 629px;
+      height: 562px;
       margin-top: -110px;
-      margin-left: 320px;
+      margin-left: 290px;
       h3 {
-        padding-top: 90px;
-        padding-left: 130px;
+        padding-top: 80px;
+        padding-left: 170px;
       }
       img {
-        padding-left: 80px;
-        max-width: 100%;
+        padding-left: 33px;
+        max-width: 89%;
+        margin-top: -10px;
+        @media (max-width: 768px) {
+          max-width: 100%;
+        }
       }
     }
     &.polygon-4 {
       background: url('../img/polygon-4.png') no-repeat;
-      width: 575px;
-      height: 434px;
-      margin-top: -50px;
-      margin-left: 100px;
+      background-size: 476px 476px;
+      width: 476px;
+      height: 476px;
+      margin-top: -30px;
+      margin-left: 15px;
       h3 {
-        padding-left: 180px;
-        padding-top: 80px;
+        padding-left: 120px;
+        padding-top: 70px;
       }
       p {
-        padding-left: 105px;
-        width: 485px;
+        padding-left: 80px;
+        width: 410px;
       }
     }
     &.polygon-5 {
       background: url('../img/polygon-5.png') no-repeat;
-      width: 498px;
-      height: 414px;
-      margin-top: -50px;
-      margin-left: 370px;
+      background-size: 458px 458px;
+      width: 458px;
+      height: 458px;
+      margin-top: -290px;
+      margin-left: 470px;
       h3 {
-        padding-left: 80px;
+        padding-left: 136px;
         padding-top: 45px;
       }
       p {
-        padding-left: 80px;
-        width: 425px;
+        padding-left: 90px;
+        width: 415px;
       }
+    }
+    &.polygon-6 {
+      background: url('../img/polygon-6.png') no-repeat;
+      background-size: 447px 337px;
+      width: 447px;
+      height: 337px;
+      margin-top: -150px;
+      margin-left: 60px;
+      h3 {
+        padding-left: 66px;
+        padding-top: 54px;
+      }
+      p {
+        padding-left: 66px;
+        width: 394px;
+      }
+    }
+    @media (max-width: 992px) and (min-width: 768px) {
+      zoom: 80%;
     }
     @media (max-width: 768px) {
       background: rgba(51,51,51,0.9) !important;
@@ -199,6 +279,7 @@ h2 {
       margin-top: 40px !important;
       padding: 20px !important;
       h3, p, img {
+        margin-top: 0 !important;
         padding: 0 !important;
       }
       p {
@@ -213,7 +294,7 @@ h2 {
   margin-top: 100px;
   h2 {
     font-family: @dosis;
-    color: @red;
+    color: @white;
     text-transform: uppercase;
     margin-bottom: 20px;
   }
@@ -257,31 +338,16 @@ h2 {
     margin: 0 auto;
     border-top: 1px solid @black;
   }
-  .subtitle {
-    display: inline-block;
-    position: relative;
-    top: -3px;
-    text-transform: uppercase;
-    padding-left: 20px;
-    @media (max-width: 768px) {
-      display: block;
-      position: static;
-      top: 0;
-      padding-left: 0;
-      padding-bottom: 20px;
-    }
-  }
   .copyright {
     position: relative;
-    top: -6px;
     text-align: right;
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
       position: static;
       top: 0;
       text-align: left;
     }
     a {
-      color: @red;
+      color: @yellow;
       &:hover {
         text-decoration: underline;
       }

@@ -11,53 +11,57 @@
     <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
+<div class="container" id="home">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand link" href="/">MANTL.io</a>
+                <a class="navbar-brand link" href="#home">MANTL.io</a>
             </div>
             <p class="navbar-text navbar-right">
-                <a href="https://github.com/ciscocloud/microservices-infrastructure" class="navbar-link link">GITHUB</a>
+                <a href="https://github.com/ciscocloud/microservices-infrastructure" class="navbar-link link link-github">GITHUB</a>
                 <span class="separator"></span>
-                <a href="http://microservices-infrastructure.readthedocs.org/en/latest" class="navbar-link link">DOCS</a>
+                <a href="http://microservices-infrastructure.readthedocs.org/en/latest" class="navbar-link link link-docs">DOCS</a>
             </p>
         </div>
     </nav>
     <div class="row introduction">
         <div class="col-md-12">
-            <img src="assets/img/logo.png">
-            <h2>The Bedrock of Microservices</h2>
+            <img src="assets/img/mantl-logo-1.png" class="logo" width="328">
+            <h2>The Bedrock of Hassle Free<br> Microservices Infrastructure</h2>
         </div>
     </div>
     <div class="row polygons">
         <div class="col-md-12">
             <div class="polygon polygon-1">
-                <h3>Snowflakes</h3>
-                <p>A container orchestrator, docker, a network stack, something to pool your logs, something to monitor health, a sprinkle of service discovery and some automation. Sound familiar?</p>
-                <p>Creating container infrastructure seems cooler than being in a band at college… Everyone’s doing it. Often with the same tools, often with the same goals, yet no two deployments are alike.</p>
-                <p>We’re creating snowflakes from the glue; and glueflakes are bad! Like Decaf, or warm beer.</p>
+                <h3>Snowflakes!</h3>
+                <p class="paragraph-1">A container orchestrator, docker, a network stack, something to pool your logs, something to monitor health, a sprinkle of service discovery and some automation. Sound familiar?</p>
+                <p class="paragraph-2">Creating container infrastructure seems cooler than being in a band at college… Everyone’s doing it. Often with the same tools, often with the same goals, yet no two deployments are alike.</p>
+                <p class="paragraph-3">We’re creating snowflakes from the glue; and glueflakes are bad! Like Decaf, or warm beer.</p>
+                <img src="assets/img/mantl-diagram-1.png" width="374">
             </div>
             <div class="polygon polygon-2">
-                <h3>No Glue Code!</h3>
+                <h3>The whole stack.</h3>
                 <p>DevOps, It’s all about agility, so we’re told; Get your application up fast, be the first, pivot quickly, improve often.</p>
-                <p>So you need container infrastructure? You’re going to glue it together yourself? Congratulations, you’ve got technical debt before your first line of application code.</p>
-                <p>Debug your application, not your infrastructure.</p>
+                <p>But when you're deploying microservices, you'll soon run into problems. How to describe a deployment? Where should you run which service? How do you connect them together? Where should you store secrets? Where should the logs go?</p>
+                <p>These questions call for a new kind of stack. Mantl is your answer.</p>
             </div>
             <div class="polygon polygon-3">
                 <h3>Architecture</h3>
-                <img src="assets/img/diagram-1.png">
+                <img src="assets/img/mantl-architecture-1.png">
             </div>
             <div class="polygon polygon-4">
-                <h3>Batteries included</h3>
-                <p>Introducing Mantl. A batteries included end to end solution for your microservices infrastructure.</p>
+                <h3>Introducing Mantl</h3>
+                <p>A batteries included end to end solution for your microservices infrastructure.</p>
                 <p>Mantl’s ethos is to focus a community around an end to end solution, not around an individual component; designed to solve business and team challenges, one glue, improved by the community, tested everywhere.</p>
             </div>
             <div class="polygon polygon-5">
-                <h3>Open</h3>
-                <p>No one has a crystal ball…</p>
-                <p>A solutions focus allows us to “do what works”; use open source tools to get the job done and provide the best user experience.</p>
-                <p>By not trying to force all our use cases into one tool, we’re able to achieve that and like any agile development effort, we can pivot quickly if a component, technology or licence becomes a concern.</p>
+                <h3>Use less glue</h3>
+                <p>Mantl provides all the components you need to deploy your microservices platform. We have chosen industry standard components and made them work well together, so you don't have to write any glue code. You can focus on your application instead.</p>
+                <p class="caps">Debug your application, not your infrastructure.</p>
+            </div>
+            <div class="polygon polygon-6">
+                <h3>Agnostic</h3>
+                <p>We're cloud agnostic, so you can run Mantl on a number of providers already. Openstack, Bare Metal, Vagrant, GCE and AWS are all available, and support for new providers is easy to accomplish using Terraform. </p>
             </div>
         </div>
     </div>
@@ -72,11 +76,10 @@
     <div class="row footer">
         <div class="separator-hr"></div>
         <div class="col-md-6">
-            <img src="assets/img/logo.png" width="148">
-            <span class="subtitle">The Bedrock of Microservices</span>
+            <img src="assets/img/mantl-logo-2.png" width="156">
         </div>
         <div class="col-md-6">
-            <p class="copyright">Copyright &copy; 2015 CISCO. All Rights Reserved.<br>Design <a href="http://www.remembertoplay.co/">remember to play</a> in collaboration with <a href="http://container-solutions.com/">Container Solutions</a>.</p>
+            <p class="copyright">Copyright &copy; 2015 CISCO. All Rights Reserved<br>Design <a href="http://www.remembertoplay.co/">remember to play</a> in collaboration with <a href="http://container-solutions.com/">Container Solutions</a></p>
         </div>
     </div>
 </div>
