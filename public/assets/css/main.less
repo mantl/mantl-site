@@ -26,16 +26,20 @@ html {
   background-size: 1000px 3500px;
   height: 100%;
   @media (max-width: 768px) {
-    background: url('../img/mantl-bg-gradient.png') #ea2056 no-repeat top center;
-    background-size: 1000px 3500px;
+    background: url('../img/mantl-bg-gradient-mobile.png') no-repeat top center;
+    background-size: 768px 4200px;
   }
 }
 
 body {
-  background: url('../img/mantl-bg-mesh-2.png') no-repeat top center;
-  background-size: 2000px 2533px;
+  background: url('../img/mantl-bg-mesh.png') no-repeat top center;
+  background-size: 2500px 3500px;
   min-height: 100%;
   margin: 0;
+  @media (max-width: 768px) {
+    background: url('../img/mantl-bg-mesh-mobile.png') no-repeat top center;
+    background-size: 768px 4200px;
+  }
 }
 
 body > .container {
