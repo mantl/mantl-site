@@ -1,0 +1,141 @@
+footer {
+	background: $black;
+	padding: 20px 0;
+
+	@media #{$medium-up} {
+		padding: 40px 0 30px 0;
+	}
+
+	@media #{$large-up} {
+		padding: 50px 0 0 0;
+	}
+
+	@media #{$xlarge-up} {
+		padding: 65px 0 0 0;
+	}
+
+	h5 {
+		font-weight: 500;
+		color: white;
+		font-size: 14px;
+		text-transform: uppercase;
+
+		@media #{$medium-up} {
+			font-size: 18px;		
+		}
+
+		@media #{$large-up} {	
+			font-size: 25px;
+		}	
+
+		@media #{$xlarge-up} {
+			font-size: 30px;
+		}
+	}
+
+	ul {
+		margin-bottom: 20px;
+
+		a {
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: 300;
+			color: $greyMedium;
+			text-decoration: none;
+
+			span {
+				font-weight: 500;
+			}
+
+			@media #{$medium-up} {
+				font-size: 13px;
+
+				span {
+					display: block;
+				}		
+			}
+
+			@media #{$large-up} {	
+				font-size: 20px;
+			}
+
+			@media #{$xlarge-up} {
+				font-size: 22px;
+			}	
+		}
+	}
+
+	.blog-feed {
+
+		@media #{$medium-up} {
+
+			li {
+				margin-bottom: 20px;
+			}
+		}
+
+		@media #{$large-up} {
+
+			li {
+
+				&:last-child {
+					margin-bottom: 110px;
+				}
+			}
+		}
+
+		@media #{$xlarge-up} {
+
+			li {
+
+				&:last-child {
+					margin-bottom: 150px;
+				}
+			}
+		}	
+	}
+
+	.footer__copyright {
+		font-size: 8px;
+		font-family: $headFont;
+		color: $greyMedium;
+		text-align: center;
+		margin-top: 50px;
+
+		a {
+			color: $greyMedium;
+		}
+
+		@media #{$medium-up} {
+			font-size: 10px;
+			text-align: left;
+
+			br {
+				display: none;
+			}
+		}
+	}
+
+	.footer__copyright-container {
+
+		@media #{$large-up} {
+			background: white url($imgs + 'logos/mantl-footer.svg') no-repeat center 40px;
+			padding: 40px 0 30px 0;
+			
+			p {
+				color: $grey;
+				text-align: center;
+				font-size: 12px;
+
+				a {
+					color: $grey;
+				}
+			}
+		}
+
+		@media #{$xlarge-up} {
+
+			p { font-size: 18px; }
+		}
+	}
+}

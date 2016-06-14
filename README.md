@@ -1,14 +1,9 @@
-# Mantl Website
+# Mantl.io
 
-## Run the application
-    
-    $ docker build -t mantl . 
-    $ docker run -d -p 80:80 --name mantl mantl
-    
-or using Docker Compose
+## Build site
 
-    $ docker-compose up
+`composer update`
 
-## Sponsors
+`cd resources/assets`
 
-This project is sponsored by Cisco Cloud Services
+`npm update && bower install && grunt build`

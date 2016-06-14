@@ -1,0 +1,93 @@
+.menu-toggle {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	background: green;
+	outline: none;
+	text-indent: -9999px;
+	border: 0;
+	z-index: 100;
+
+	width: 50px;
+	height: 50px;
+	
+	background: transparent;
+	
+	&:focus {
+		outline: none;
+	}
+	
+	span {
+		display: block;
+		position: absolute;
+		top: 24px;
+		left: 12px;
+		right: 12px;
+		height: 2px;
+		background: $black;
+		
+		&:before,
+		&:after {
+			position: absolute;
+			display: block;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: $black;
+			content: "";
+		}
+		
+		&:before {
+			top: -10px;
+		}
+
+		&:after {
+			bottom: -10px;
+		}
+	}
+	
+	&.toggle-button--htx {
+		
+		span {
+			transition: background 0s 0.3s;
+			
+			&:before,
+			&:after {
+				transition-duration: 0.3s, 0.3s;
+				transition-delay: 0.3s, 0s;
+				
+			}
+			
+			&:before {
+				transition-property: top, transform;
+			}
+			
+			&:after {
+				transition-property: bottom, transform;
+			}
+		}
+		
+		&.is-active {
+			
+			span {
+				background: none;
+				
+				&:before,
+				&:after {
+					transition-delay: 0s, 0.3s;
+					//background: white;
+				}
+				
+				&:before {
+					top: 0;
+					transform: rotate(45deg);
+				}
+				
+				&:after {
+					bottom: 0;
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+}
