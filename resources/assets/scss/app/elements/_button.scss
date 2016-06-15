@@ -4,13 +4,11 @@
 	border: 2px solid $black;
 	color: $black;
 	padding: 0 10px;
-	background: transparent;
 	font-family: $headFont;
 	font-weight: 500;
 	font-size: 13px;
 	text-transform: uppercase;
 	background: white;
-
 	margin-bottom: 1em;
 
 	@media #{$medium-up} {
@@ -46,12 +44,7 @@
 		border: none;
 		line-height: 29px;
 		padding: 0 12px;
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffc118+0,ef3b39+100 */
-		background: #ffc118; /* Old browsers */
-		background: -moz-linear-gradient(left,  #ffc118 0%, #ef3b39 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(left,  #ffc118 0%,#ef3b39 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(to right,  #ffc118 0%,#ef3b39 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc118', endColorstr='#ef3b39',GradientType=1 ); /* IE6-9 */
+		@include gradientOraRedHor();
 
 		@media #{$medium-up} {
 			line-height: 34px;

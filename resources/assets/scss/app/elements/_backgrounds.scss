@@ -1,0 +1,45 @@
+@mixin whiteDottedBg() {
+	background: white url($gradients + 'cta.svg') no-repeat center center;
+	background-size: cover;
+}
+
+@mixin orangeDottedBg() {
+	background: transparent url($gradients + 'hero.svg') no-repeat center center;
+	background-size: cover;
+}
+
+@mixin menuBg() {
+	background: url( $gradients + 'menu.svg') no-repeat center center;
+	background-size: cover;
+}
+
+@mixin gradientOraRedHor() {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffc118+0,ef3b39+100 */
+	background: #ffc118; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ffc118 0%, #ef3b39 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #ffc118 0%,#ef3b39 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #ffc118 0%,#ef3b39 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc118', endColorstr='#ef3b39',GradientType=1 ); /* IE6-9 */
+}
+
+@mixin gradientOraRedVer() {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffc118+0,ef3b39+100 */
+	background: #ffc118; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffc118 0%, #ef3b39 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #ffc118 0%,#ef3b39 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #ffc118 0%,#ef3b39 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc118', endColorstr='#ef3b39',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin tabBg($color) {
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20width%3D%22160px%22%20height%3D%2240px%22%20viewBox%3D%220%200%20160%2040%22%20enable-background%3D%22new%200%200%20160%2040%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cpath%20fill%3D%22%23" + $color+ "%22%20d%3D%22M159.968%2C3.771L160%2C0H0l4.568%2C25.939c0.438%2C2.479%2C2.774%2C4.865%2C5.192%2C5.305l120.979%2C8.668%0D%0A%09%09c2.422%2C0.441%2C5.654-0.811%2C7.186-2.777l19.676-25.23C159.138%2C9.937%2C159.968%2C6.312%2C159.968%2C3.771z%22%2F%3E%0D%0A%3C%2Fg%3E%0D%0A%3C%2Fsvg%3E%0D%0A");
+}
+
+@mixin tabBottomBg($color) {
+	background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20width%3D%22160px%22%20height%3D%2240px%22%20viewBox%3D%220%200%20160%2040%22%20enable-background%3D%22new%200%200%20160%2040%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cpath%20fill%3D%22%23" + $color+ "%22%20d%3D%22M159.968%2C3.771L160%2C0H0l4.568%2C25.939c0.438%2C2.479%2C2.774%2C4.865%2C5.192%2C5.305l120.979%2C8.668%0D%0A%09%09c2.422%2C0.441%2C5.654-0.811%2C7.186-2.777l19.676-25.23C159.138%2C9.937%2C159.968%2C6.312%2C159.968%2C3.771z%22%2F%3E%0D%0A%3C%2Fg%3E%0D%0A%3C%2Fsvg%3E%0D%0A");
+}
+		

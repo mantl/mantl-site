@@ -15,7 +15,6 @@ footer {
 	}
 
 	h5 {
-		font-weight: 500;
 		color: white;
 		font-size: 14px;
 		text-transform: uppercase;
@@ -135,7 +134,9 @@ footer {
 
 		@media #{$xlarge-up} {
 
-			p { font-size: 18px; }
+			p { 
+				font-size: 18px; 
+			}
 		}
 	}
 }
