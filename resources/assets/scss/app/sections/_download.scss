@@ -1,0 +1,30 @@
+.download {
+	padding: 50px 0 0 0;
+	background: $greyLight;
+
+	@media #{$medium-up} {
+		padding: 60px 0 0 0;
+		text-align: center;
+	}
+
+	@media #{$large-up} {
+		padding: 90px 0 0 0;
+	}
+
+	.button-group {
+		padding-bottom: 25px;
+
+		@media #{$large-up} {
+			padding-bottom: 60px;
+		}
+	}
+
+	.download__example {
+		background: white;
+		padding: 35px 0;
+
+		@media #{$large-up} {
+			padding: 70px 0;
+		}
+	}
+}

@@ -6,7 +6,7 @@
 
 			<h3 class="hd hd-black">Mantl Use Cases</h3>
 			
-			<p class="use-cases__lead">Mantl is used to solve DevOps, business and team challenges. <br>Here are a couple of the primary use cases.</p>	
+			<p class="lead use-cases__lead">Mantl is used to solve DevOps, business and team challenges. <br>Here are a couple of the primary use cases.</p>	
 	
 		</div>
 	

@@ -15,22 +15,10 @@
 	}
 
 	.use-cases__lead {
-		font-family: $headFont;
 		margin: 1em 0 2em 0;
-		font-size: 18px;
-		line-height: 1.3;
 
 		@media #{$medium-up} {
 			text-align: center;
-			font-size: 22px;
-		}
-
-		@media #{$large-up} {
-			font-size: 30px;
-		}
-
-		@media #{$xlarge-up} {
-			font-size: 40px;
 		}
 
 		@media #{$small-only} {

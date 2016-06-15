@@ -41,8 +41,6 @@ $(function(){
 
 		if (el.hasClass(activeClass)) {
 			
-			console.log("Cierra");
-
 			el.removeClass(activeClass);
 		
 			menu.velocity({
@@ -54,8 +52,6 @@ $(function(){
 			}, {duration: 1})
 		}
 		else {
-
-			console.log("Abre");
 
 			el.addClass(activeClass);
 		
