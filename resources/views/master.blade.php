@@ -25,6 +25,24 @@
         @include('components.header', ["pageID" => $pageID])
 
         <div id="main">
+
+            @if($pageID != 0 && $pageID != 5)
+
+                <div class="page-header"> 
+
+                    <div class="row">
+                        
+                        <div class="columns small-12">
+                            
+                            <h1>@yield('page-header')</h1>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            @endif
             
             @yield('content')
 

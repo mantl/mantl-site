@@ -3,5 +3,7 @@
 @section('title', 'Download')
 
 @section('content')
-    <p>Download.</p>
+
+    <h1 class="hd hd-black">Download Mantl</h1>
+
 @endsection

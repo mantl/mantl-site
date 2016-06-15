@@ -2,6 +2,14 @@
 
 @section('title', 'Technologies')
 
+@section('page-header')
+
+	<h1>Bringin together the best-of-breed technologies</h1>
+
+@endsection
+
 @section('content')
-    <p>Technologies.</p>
+	
+	@include('sections.technologies')
+
 @endsection
