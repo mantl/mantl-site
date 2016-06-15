@@ -10,4 +10,6 @@
 
 	@include('sections.use-cases')
 
+	@include('sections.technologies')
+
 @endsection
