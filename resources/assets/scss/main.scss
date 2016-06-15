@@ -71,9 +71,11 @@ $bodyFont: 'Lato', sans-serif;
 @import 
 	"app/base",
 
+	"app/elements/button",
 	"app/elements/icons-menu",
 	"app/elements/menu-toggle",
 
+	"app/components/cta",
 	"app/components/footer",
 	"app/components/header",
 	"app/components/tabs";

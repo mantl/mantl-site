@@ -56,6 +56,8 @@
 
         </div>	
 
+        @include('components.footer-cta', ["pageID" => $pageID])
+
         @include('components.footer')	
 
 		<script src="static/js/bundle.min.js"></script>
