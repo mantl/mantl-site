@@ -3,6 +3,15 @@ header {
 	position: absolute;
     width: 100%;
     z-index: 1;
+
+    @media #{$medium-up} {
+    	height: 60px;
+    	padding: 0 .9375rem 0 0;
+    }
+
+    @media #{$large-up} {
+    	height: 90px;
+    }
     
     .fixed-header & {
     	position: fixed;
@@ -22,6 +31,24 @@ header {
 		width: 50px;
 		height: 50px;
 		text-indent: -9999px;
+
+		@media #{$medium-up} {
+			background: transparent url($imgs + 'logos/mantl-header.svg') no-repeat center center;
+			background-size: cover;
+			height: 40px;
+			width: 102px;
+			right: auto;
+			top: auto;
+			position: relative;
+			z-index: 100;
+			margin-top: 10px;
+		}
+
+		@media #{$large-up} {
+			height: 50px;
+			width: 126px;
+			margin-top: 20px;
+		}
 	}
 }
 
@@ -38,13 +65,70 @@ header {
 	z-index: 10;
 	display: none;
 
+	@media #{$medium-up} {
+		display: block!important;
+		position: absolute;
+		left: .9375rem;
+		padding: 0 .9375rem 0 102px;
+		height: 60px;
+		width: 100%;
+		background: none;
+
+		li {
+			display: inline-block;
+			line-height: 60px;
+		}
+	}
+
+	@media #{$large-up} {
+		height: 90px;
+		padding: 0 .9375rem 0 126px;
+
+		li {
+			line-height: 90px;
+		}
+	}
+
 	.main {
 		font-size: 35px;
+
+		@media #{$medium-up} {
+			font-size: 12px;
+			display: block;
+			float: right;
+			padding-right: 200px;
+			height: 60px;
+
+			a {
+				height: 100%;
+				padding: 0 10px;
+			}
+		}
+
+		@media #{$large-up} {
+			font-size: 15px;
+			height: 90px;
+
+			a {
+
+			}
+		}
 	}
 
 	.side {
 		font-size: 22px;
 		margin-top: 50px;
+
+		@media #{$medium-up} {
+			margin-top: 0;
+			position: absolute;
+			right: .9375rem;
+			top: 10px;
+		}
+
+		@media #{$large-up} {
+			top: 25px;
+		}
 	}
 
 	a {
