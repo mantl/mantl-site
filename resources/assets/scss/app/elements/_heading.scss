@@ -1,0 +1,24 @@
+.hd {
+	display: block;
+	margin: 0 auto;
+	width: 160px;
+	
+	@media #{$medium-up} {
+		width: 240px;
+	}
+
+	@media #{$large-up} {
+		width: 320px;
+	}
+
+	@media #{$xlarge-up} {
+		width: 460px;
+	}
+
+	@include tabStyleFont();
+
+	&.hd-black {
+		color: white;
+		@include tabBg("211f1f");
+	}
+}

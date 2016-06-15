@@ -1,0 +1,177 @@
+.use-cases {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffc118+0,ef3b39+100 */
+	background: #ffc118; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffc118 0%, #ef3b39 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #ffc118 0%,#ef3b39 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #ffc118 0%,#ef3b39 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc118', endColorstr='#ef3b39',GradientType=0 ); /* IE6-9 */
+	
+	padding: 0 0 60px 0;
+
+	@media #{$medium-up} {
+		padding: 0 0 90px 0;
+	}
+
+	@media #{$large-up} {
+		padding: 0 0 110px 0;
+	}
+
+	@media #{$medium-up} {
+		padding: 0 0 130px 0;
+	}
+
+	.use-cases__lead {
+		font-family: $headFont;
+		margin: 1em 0 2em 0;
+		font-size: 18px;
+		line-height: 26px;
+
+		@media #{$medium-up} {
+			text-align: center;
+			font-size: 22px;
+			line-height: 28px;
+		}
+
+		@media #{$large-up} {
+			font-size: 30px;
+			line-height: 37px;
+		}
+
+		@media #{$xlarge-up} {
+			font-size: 40px;
+			line-height: 52px;
+		}
+
+		@media #{$small-only} {
+
+			br {
+				display: none;
+			}
+		}
+	}
+
+	.use-cases__item {
+		margin-bottom: 50px;
+
+		@media #{$medium-up} {
+			text-align: center;
+			margin-bottom: 100px;
+		}
+
+		@media #{$large-up} {
+			text-align: left;
+			margin-bottom: 60px;
+		}
+
+		@media #{$xlarge-up} {
+			margin-bottom: 100px;
+		}
+
+		img {
+			margin-bottom: 20px;
+		}
+
+		h3 {
+			font-weight: 500;
+			font-size: 24px;
+			color: white;
+			text-transform: uppercase;
+
+			@media #{$medium-up} {
+				font-size: 28px;
+				color: $black;
+			}
+
+			@media #{$large-up} {
+				font-size: 35px;
+			}
+
+			@media #{$xlarge-up} {
+				font-size: 45px;
+			}
+		}
+
+		p {
+			font-weight: 300;
+			color: white;
+
+			font-size: 15px;
+			line-height: 23px;
+
+			@media #{$medium-up} {
+				font-size: 16px;
+				line-height: 26px;
+			}
+
+			@media #{$large-up} {
+				font-size: 20px;
+				line-height: 32px;
+			}
+
+			@media #{$xlarge-up} {
+				font-size: 22px;
+				line-height: 36px;
+			}
+		}
+	}
+
+	blockquote {
+		//text-align: center;
+		margin: 0;
+		padding: 0;
+		border: none;
+		color: $black;
+		font-family: $headFont;
+
+		@media #{$medium-up} {
+			font-size: 22px;
+			text-align: center;
+		}
+
+		@media #{$large-up} {
+			font-size: 30px;
+		}
+
+		@media #{$xlarge-up} {
+			font-size: 35px;
+		}
+
+		p {
+			//margin: 0;
+			margin: 20px 0 0 0;
+			color: white;
+
+			@media #{$medium-up} {
+				font-size: 15px;
+			}
+
+			@media #{$large-up} {
+				font-size: 20px;
+			}
+
+			@media #{$xlarge-up} {
+				font-size: 23px;
+			}
+		}
+
+		span {
+			display: block;
+
+			@media #{$medium-up} {
+				font-size: 19px;
+			}
+
+			@media #{$large-up} {
+				font-size: 25px;
+			}
+
+			@media #{$xlarge-up} {
+				font-size: 29px;
+			}
+
+			&:before {
+				content: "– ";
+			}
+		}
+	}
+}

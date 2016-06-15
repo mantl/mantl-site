@@ -1,0 +1,58 @@
+.features {
+
+	.tab-content {
+		padding: 30px 0 35px 0;
+	}
+
+	.features__item {
+		margin-bottom: 30px;
+		text-align: left;
+
+		h3 {
+			font-weight: 500;
+			font-size: 20px;
+			text-transform: uppercase;
+
+			@media #{$medium-up} {
+				font-size: 24px;
+			}
+
+			@media #{$large-up} {
+				font-size: 27px;
+			}
+
+			@media #{$xlarge-up} {
+				font-size: 35px;
+			}
+		}
+
+		p {
+			font-size: 15px;
+			line-height: 23px;
+			font-weight: 300;
+			
+			@media #{$medium-up} {
+				font-size: 16px;
+			}
+
+			@media #{$large-up} {
+				font-size: 20px;
+				line-height: 32px;
+			}
+
+			@media #{$xlarge-up} {
+				font-size: 22px;
+				line-height: 34px;
+			}
+		}
+	}
+
+
+	// When displays at home page
+
+	.home & {
+
+
+
+	}
+}
