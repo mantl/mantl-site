@@ -1,0 +1,104 @@
+.hero {
+	text-align: center;
+	height: 100vh;
+	padding-top: 50px;
+	background: transparent url($gradients + 'hero.svg') no-repeat center center;
+	background-size: cover;
+
+	.hero__content {
+		position: relative;
+	  	top: 50%;
+	  	transform: translateY(-50%);
+	  	margin-top: -25px;
+	}
+
+	h1 {
+		font-size: 35px;
+		line-height: 1.02;
+		color: white;
+		text-transform: uppercase;
+		margin: 0 0 .8em 0;
+
+		@media #{$medium-up} {
+			font-size: 40px;
+		}
+
+		@media #{$large-up} {
+			font-size: 60px;
+		}
+
+		@media #{$xlarge-up} {
+			font-size: 100px;
+		}
+
+		span {
+			display: block;
+
+			&.code {
+
+			}
+
+			&.deploy {
+
+			}
+
+			&.relax {
+				
+				&:before {
+					content: "- ";
+				}
+			}
+		}
+
+		@media #{$medium-up} {
+			
+			span {
+				display: inline-block;
+
+				&.code {
+
+					&:after {
+						content: " _ ";
+					}
+				}
+
+				&.deploy {
+
+					&:after {
+						content: " - ";
+					}
+				}
+
+				&.relax {
+					
+					&:before {
+						content: "";
+					}
+				}
+			}
+		}
+	}
+
+	p {
+		font-family: $headFont;
+		font-size: 18px;
+		line-height: 1.2;
+		margin: 0 0 2em 0;
+
+		@media #{$medium-up} {
+			font-size: 22px;
+		}
+
+		@media #{$large-up} {
+			font-size: 28px;
+		}
+
+		@media #{$xlarge-up} {
+			font-size: 40px;
+		}
+	}
+
+	.button {
+		margin: 0;
+	}
+}

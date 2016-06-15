@@ -9,6 +9,7 @@
 	font-weight: 500;
 	font-size: 13px;
 	text-transform: uppercase;
+	background: white;
 
 	margin-bottom: 1em;
 
@@ -36,6 +37,7 @@
 
 	&.button-alt {
 		color: white;
+		background: transparent;
 		border-color: white;
 	}
 

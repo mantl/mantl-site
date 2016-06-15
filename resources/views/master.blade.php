@@ -54,9 +54,9 @@
             
             @yield('content')
 
+            @include('components.cta', ["pageID" => $pageID])
+            
         </div>	
-
-        @include('components.footer-cta', ["pageID" => $pageID])
 
         @include('components.footer')	
 

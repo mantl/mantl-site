@@ -79,9 +79,9 @@ $bodyFont: 'Lato', sans-serif;
 @import 
 	"app/base",
 
+	"app/elements/backgrounds",
 	"app/elements/tabs",
 	"app/elements/heading",
-
 	"app/elements/button",
 	"app/elements/icons-menu",
 	"app/elements/menu-toggle",
@@ -91,5 +91,6 @@ $bodyFont: 'Lato', sans-serif;
 	"app/components/header",
 	"app/components/tabs",
 
+	"app/sections/hero",
 	"app/sections/features",
 	"app/sections/use-cases";
