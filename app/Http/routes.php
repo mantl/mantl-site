@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('pages.home', ['pageID' => 0]);
+    return view('pages.home', ['pageID' => 0]);    
 });
 
 Route::get('/features', function () {
@@ -33,4 +33,19 @@ Route::get('/faq', function () {
 
 Route::get('/download', function () {
     return view('pages.download', ['pageID' => 5]);
+});
+
+Route::get('/feed/{feed}', function ($feed) {
+
+    $feed = Feeds::make('http://blogs.cisco.com/tag/'. $feed .'/feed');
+
+    $return = [];
+
+    foreach ($feed->get_items(0,2) as $key => $value) {
+        $return[$key]['date'] = $value->get_date('j F Y');
+        $return[$key]['title'] = $value->get_title();
+        $return[$key]['url'] = $value->get_link();
+    }
+
+    return Response::json($return);
 });

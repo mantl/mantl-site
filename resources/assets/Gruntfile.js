@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 			all : {
 				dest : "js/bundle.js",
 				exclude : ["modernizr"],
-				include : ["jquery", "velocity", "isInViewport"]
+				include : ["jquery", "jquery-migrate", "velocity", "isInViewport"]
 			}
 		},
 		

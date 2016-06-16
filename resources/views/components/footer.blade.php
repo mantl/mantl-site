@@ -24,15 +24,9 @@
 
             <h5>Blog</h5>
 
-            <nav class="blog-feed">
+            <nav class="blog-feed mantl">
                 
-                <ul>
-                    
-                    <li><a href="#" target="_blank"><span>Mantl - Release 4.0</span> 5th nov 2016</a></li>
-
-                    <li><a href="#" target="_blank"><span>Containers</span> 30th aug 2016</a></li>
-
-                </ul>
+                <ul></ul>
             
             </nav>
 

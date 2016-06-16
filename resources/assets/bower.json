@@ -20,7 +20,8 @@
     "foundation": "~5.5.3",
     "bourbon": "~4.2.6",
     "velocity": "^1.2.3",
-    "isInViewport": "^2.3.1"
+    "isInViewport": "^2.3.1",
+    "jquery-migrate": "^1.4.0"
   },
   "resolutions": {
     "jquery": "^1.9.0"

@@ -24,6 +24,7 @@
         $('#youtube').spidochetube({
             key         : 'AIzaSyC7aG-1FmGP7HJmSa-CrizRQytTHG14mok',
             id          : 'PLaORKu0arXYCXAtbPFLbIj9yN48hKJGeS', // add the youtube playlist id of your choice
+            max_results : 50,
             complete : function() {
 
             }
