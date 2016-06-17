@@ -28,7 +28,10 @@ Route::get('/resources', function () {
 });
 
 Route::get('/faq', function () {
-    return view('pages.faq', ['pageID' => 4]);
+
+    $content = file_get_contents('https://raw.githubusercontent.com/CiscoCloud/mantl/master/docs/faq.rst');
+
+    return view('pages.faq', ['pageID' => 4, 'questions' => Markdown::string($content)]);
 });
 
 Route::get('/download', function () {

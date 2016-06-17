@@ -157,6 +157,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         willvincent\Feeds\FeedsServiceProvider::class,
+        VTalbot\Markdown\MarkdownServiceProvider::class,
     ],
 
     /*
@@ -204,7 +205,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Feeds'    => willvincent\Feeds\Facades\FeedsFacade::class,
-
+        'Markdown' => VTalbot\Markdown\Facades\Markdown::class,
     ],
 
 ];

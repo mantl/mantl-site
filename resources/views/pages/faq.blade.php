@@ -11,5 +11,5 @@
 @endsection
 
 @section('content')
-    <p>FAQ.</p>
+    {!! $questions !!}
 @endsection

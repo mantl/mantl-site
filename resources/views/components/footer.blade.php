@@ -6,15 +6,9 @@
 
             <h5>Events</h5>
 
-            <nav class="blog-feed">
+            <nav class="blog-feed events">
                 
-                <ul>
-                    
-                    <li><a href="#" target="_blank"><span>Dockercon</span> 15th may 2016</a></li>
-
-                    <li><a href="#" target="_blank"><span>Ozcon</span> 30th aug 2016</a></li>
-
-                </ul>
+                <ul></ul>
             
             </nav>
 		

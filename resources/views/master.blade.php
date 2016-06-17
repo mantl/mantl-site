@@ -67,6 +67,16 @@
                     });
                 }
             });
+
+            $.ajax({
+                url : "{{ url('feed/events') }}",
+                success : function (data) {
+                    $(data).each(function(index, item) {
+                        var html = "<li><a target='_blank' href='" + item.url + "'><span>" + item.title + "</span> " + item.date + "</a></li>";
+                        $(".blog-feed.events ul").append(html);
+                    });
+                }
+            });
             
         </script>
 
