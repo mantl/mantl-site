@@ -6,7 +6,7 @@
 
 	@include('sections.hero')
 
-	@include('sections.features')
+	@include('sections.features', ['devops_features' => $devops_features, 'business_features' => $business_features])
 
 	@include('sections.use-cases')
 

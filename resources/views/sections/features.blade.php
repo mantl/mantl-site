@@ -1,70 +1,51 @@
 <section class="features">
 		
-		<div class="tabs">
-			
-			<ul>
-				
-				<li class="active">DevOps Features</li>
-
-				<li>Business Features</li>
-
-			</ul>
-
-		</div>
+	<div class="tabs">
 		
-		<div class="tab-content">
+		<ul>
 			
-			<div id="tab-1">
-				
-				<div class="row">
+			<li class="active" data-tab-group-target="business-devops-features" data-tab-target="devops-features">DevOps Features</li>
 
-					@for ($i = 0; $i < 6; $i++)
-				
-						<div class="features__item columns small-12 medium-6 large-4">
-							
-							<div class="row collapse">
-								
-								<div class="columns small-3 medium-12">
-									
-									<img src="{{ asset('static/imgs/placeholder-features.svg') }}">
+			<li data-tab-group-target="business-devops-features" data-tab-target="business-features">Business Features</li>
 
-								</div>
+		</ul>
 
-								<div class="columns small-8 small-offset-1 medium-12 medium-offset-0">
-									
-									<h3>Runs on any cloud</h3>
+	</div>
 
-									<p>No vendor lock-in. Mantl runs equally well on any cloud saving you time and energy.</p>
-
-								</div>
-
-							</div>
-
-						</div>
-
-					@endfor
-
-				</div>
-
-				<div class="row">
-					
-					<div class="columns small-12">
-						
-						<a class="button" href="#">Explore Mantl features</a>
-
-					</div>
-
-				</div>
-
-			</div>
-
-
-			<div id="tab-2" style="display:none">
+	<div class="tab-content" data-tab-group-name="business-devops-features">
+		
+		<div 
+			id="tab-1" 
+			class="tab active" 
+			data-tab-name="devops-features" 
+			class="active"
+		>
 			
-
-
-			</div>
+			@include('components.feature', ['features' => $devops_features])
 
 		</div>
 
-	</section>
+
+		<div 
+			id="tab-2"
+			class="tab" 
+			data-tab-name="business-features" 
+		>
+		
+			@include('components.feature', ['features' => $business_features])
+
+		</div>
+
+	</div>
+
+	<div class="row text-center">
+					
+		<div class="columns small-12">
+			
+			<a class="button" href="#">Explore Mantl features</a>
+
+		</div>
+
+	</div>
+
+</section>

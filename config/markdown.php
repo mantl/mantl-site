@@ -1,4 +1,4 @@
-bam<?php
+<?php
 
 return array(
 

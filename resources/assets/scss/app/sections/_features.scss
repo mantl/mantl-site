@@ -1,12 +1,26 @@
 .features {
+	padding-bottom: 35px;
 
 	.tab-content {
-		padding: 30px 0 35px 0;
+		box-sizing: content-box;
+		padding: 30px 0 0 0;
 	}
 
 	.features__item {
 		margin-bottom: 30px;
 		text-align: left;
+
+		img {
+    		width: auto;
+    		display: block;
+			margin: 10px auto 0 auto;
+			height: 40px;
+    		
+    		@media #{$large-up} {
+    			margin: 0;
+    			height: 75px;
+    		}
+		}
 
 		h3 {
 			font-weight: 500;
