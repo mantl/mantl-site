@@ -10,9 +10,14 @@
 
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 
+// Import Mixins
+
+@import "mixins/typography";
+
 // Colors
 
 $orange: #ff9510;
+$red: #ef3b39;
 $greyLight: #f1f1f2;
 $greyMedium: #babcbe;
 $grey: #a5a7aa;
@@ -48,7 +53,7 @@ $bodyFont: 'Lato', sans-serif;
 //  "../bower_components/foundation/scss/foundation/components/clearing",
 //  "../bower_components/foundation/scss/foundation/components/dropdown",
 //  "../bower_components/foundation/scss/foundation/components/dropdown-buttons",
-//	"../bower_components/foundation/scss/foundation/components/flex-video",
+	"../bower_components/foundation/scss/foundation/components/flex-video",
 //  "../bower_components/foundation/scss/foundation/components/forms",
 	"../bower_components/foundation/scss/foundation/components/grid",
 //  "../bower_components/foundation/scss/foundation/components/inline-lists",
@@ -79,7 +84,9 @@ $bodyFont: 'Lato', sans-serif;
 @import 
 	"app/base",
 
+	"app/elements/icons",
 	"app/elements/backgrounds",
+	"app/elements/back2top",
 	"app/elements/tabs",
 	"app/elements/heading",
 	"app/elements/button",
@@ -93,6 +100,8 @@ $bodyFont: 'Lato', sans-serif;
 
 	"app/sections/hero",
 	"app/sections/download",
+	"app/sections/faq",
 	"app/sections/features",
 	"app/sections/technologies",
+	"app/sections/resources",
 	"app/sections/use-cases";

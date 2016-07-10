@@ -58,7 +58,7 @@
 		width: 50%;
 		height: 100%;
 		float: left;
-		
+		@include transition();
 		@include tabBg("f1f1f2");
 		
 		color: $greyMedium;
@@ -68,6 +68,10 @@
 			@include tabBg("211f1f");	
 			color: white;
 			cursor: default;
+		}
+
+		&:not(.active):hover {
+			opacity: .8;
 		}
 	}
 

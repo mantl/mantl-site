@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 			all : {
 				dest : "js/bundle.js",
 				exclude : ["modernizr"],
-				include : ["jquery", "jquery-migrate", "velocity", "isInViewport"]
+				include : ["jquery", "jquery-migrate", "enquire", "velocity", "isInViewport", "matchHeight", "ScrollIt"]
 			}
 		},
 		
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 					compress : true
     			},
 				files : {
-					"../../public/static/js/bundle.min.js" : ["js/bundle.js", "js/main.js"]
+					"../../public/static/js/bundle.min.js" : ["bower_components/media-match/media.match.min.js", "js/bundle.js", "js/main.js", "js/faq.js", "js/tabs.js", "js/nav.js"]
     			}
   			}
 		}

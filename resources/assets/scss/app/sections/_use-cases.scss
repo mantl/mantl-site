@@ -48,101 +48,58 @@
 
 		img {
 			margin-bottom: 20px;
+			height: 60px;
+
+			@media #{$medium-up} {
+				height: 75px;
+			}
+
+			@media #{$xlarge-up} {
+				height: 100px;
+			}
 		}
 
 		h3 {
 			font-weight: 500;
-			font-size: 24px;
+			@include resFontSize(24px, 28px, 35px, 45px);
 			color: white;
 			text-transform: uppercase;
 
 			@media #{$medium-up} {
-				font-size: 28px;
 				color: $black;
-			}
-
-			@media #{$large-up} {
-				font-size: 35px;
-			}
-
-			@media #{$xlarge-up} {
-				font-size: 45px;
 			}
 		}
 
 		p {
+			@include resFontSize(15px, 16px, 20px, 22px);
 			font-weight: 300;
-			color: white;
-			font-size: 15px;
 			line-height: 1.6;
-
-			@media #{$medium-up} {
-				font-size: 16px;
-			}
-
-			@media #{$large-up} {
-				font-size: 20px;
-			}
-
-			@media #{$xlarge-up} {
-				font-size: 22px;
-			}
+			color: white;
 		}
 	}
 
 	blockquote {
-		//text-align: center;
 		margin: 0;
 		padding: 0;
 		border: none;
 		color: $black;
 		font-family: $headFont;
+		@include resFontSize(inherit, 22px, 30px, 35px);
 
 		@media #{$medium-up} {
-			font-size: 22px;
 			text-align: center;
 		}
 
-		@media #{$large-up} {
-			font-size: 30px;
-		}
-
-		@media #{$xlarge-up} {
-			font-size: 35px;
-		}
-
 		p {
+			@include resFontSize(inherit, 15px, 20px, 23px);
 			margin: 20px 0 0 0;
 			color: white;
-
-			@media #{$medium-up} {
-				font-size: 15px;
-			}
-
-			@media #{$large-up} {
-				font-size: 20px;
-			}
-
-			@media #{$xlarge-up} {
-				font-size: 23px;
-			}
 		}
 
 		span {
+			@include resFontSize(inherit, 19px, 25px, 29px);
 			display: block;
-
-			@media #{$medium-up} {
-				font-size: 19px;
-			}
-
-			@media #{$large-up} {
-				font-size: 25px;
-			}
-
-			@media #{$xlarge-up} {
-				font-size: 29px;
-			}
-
+			
 			&:before {
 				content: "– ";
 			}

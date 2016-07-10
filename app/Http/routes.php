@@ -13,101 +13,59 @@
 
 Route::get('/', function () {
 
-    $devops_features = collect([
-
-        [
-            'title' => 'Runs on any cloud',
-            'icon' => 'runs-on-any-cloud.svg',
-            'excerpt' => 'No vendor lock-in. Mantl runs equally well on any cloud saving you time and energy.'
-        ],
-        [
-            'title' => 'Flexible',
-            'icon' => 'flexible.svg',
-            'excerpt' => 'Mantl contains a diverse set of technologies and tools. Pick the ones that fit your needs.'
-        ],
-        [
-            'title' => 'Data solution',
-            'icon' => 'data-solution.svg',
-            'excerpt' => 'Integrated tools like Cassandra, Spark & Hadoop make Mantl great for Big Data.'
-        ],
-        [
-            'title' => 'Integrated cloud services',
-            'icon' => 'integrated-cloud-services.svg',
-            'excerpt' => 'Service discovery, secret storage, load balancing, native container support, logging, we have it all.'
-        ],
-        [
-            'title' => 'Connecting containers',
-            'icon' => 'connecting-containers.svg',
-            'excerpt' => 'Mantl utilizes multi-data center configuration and virtual networking through tools like Project Calico.'
-        ],
-        [
-            'title' => 'Easy provisioning',
-            'icon' => 'easy-provisioning.svg',
-            'excerpt' => 'Deploy and manage infrastructure with ease using integrated tools like Terraform & Ansible.'
-        ], 
-
-    ]);
-
-    $business_features = collect([
-
-        [
-            'title' => 'Designed for DevOps',
-            'icon' => 'designed-for-devops.svg',
-            'excerpt' => 'Easy to install and set-up, Mantl has been designed with DevOps in mind.'
-        ],
-        [
-            'title' => 'No vendor lock in',
-            'icon' => 'no-vendor-lock-in.svg',
-            'excerpt' => 'Runs on any cloud vendor allowing for seamless integration and low costs.'
-        ],
-        [
-            'title' => 'Code portability',
-            'icon' => 'code-portability.svg',
-            'excerpt' => 'Infrastructure that allows code and apps to be deployed pretty much anywhere. '
-        ],
-        [
-            'title' => 'High availability',
-            'icon' => 'high-availability.svg',
-            'excerpt' => 'Built-in services support 100% uptime for all your systems and applications.'
-        ],
-        [
-            'title' => 'Curated experience',
-            'icon' => 'curated-experience.svg',
-            'excerpt' => 'All components are validated in advance to save you time and reduce project risk.'
-        ],
-        [
-            'title' => 'Built-in security',
-            'icon' => 'built-in-security.svg',
-            'excerpt' => 'Keep your network secure without having to worry about tricky configuration.
-'
-        ],
-
-    ]);
-
-    return view('pages.home', ['pageID' => 0, 'devops_features' => $devops_features, 'business_features' => $business_features]);    
+    return view('pages.home', [
+        'pageID' => 0, 
+        'pageClass' => 'home', 
+        'devops_features' => App\Content::devopsFeatures(), 
+        'business_features' => App\Content::businessFeatures(),
+        'technologies' => App\Content::technologies()
+    ]);    
 });
 
 Route::get('/features', function () {
-    return view('pages.features', ['pageID' => 1]);
+    
+    return view('pages.features', [
+        'pageID' => 1, 
+        'pageClass' => 'features', 
+        'devops_features' => App\Content::devopsFeatures(), 
+        'business_features' => App\Content::businessFeatures()
+    ]);
 });
 
 Route::get('/technologies', function () {
-    return view('pages.technologies', ['pageID' => 2]);
+    
+    return view('pages.technologies', [
+        'pageID' => 2, 
+        'pageClass' => 'technologies', 
+        'technologies' => App\Content::technologies(),
+        'addons' => App\Content::addons()
+    ]);
 });
 
 Route::get('/resources', function () {
-    return view('pages.resources', ['pageID' => 3]);
+    
+    return view('pages.resources', [
+        'pageID' => 3, 
+        'pageClass' => 'resources',
+        'resources' => App\Content::resources()
+    ]);
 });
 
 Route::get('/faq', function () {
 
-    $content = file_get_contents('https://raw.githubusercontent.com/CiscoCloud/mantl/master/docs/faq.rst');
-
-    return view('pages.faq', ['pageID' => 4, 'questions' => Markdown::string($content)]);
+    return view('pages.faq', [
+        'pageID' => 4, 
+        'pageClass' => 'faq', 
+        'faqs' => App\Content::faq()
+    ]);
 });
 
 Route::get('/download', function () {
-    return view('pages.download', ['pageID' => 5]);
+    
+    return view('pages.download', [
+        'pageID' => 5, 
+        'pageClass' => 'download'
+    ]);
 });
 
 Route::get('/feed/{feed}', function ($feed) {

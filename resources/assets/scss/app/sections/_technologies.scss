@@ -29,6 +29,11 @@
 			display: block;
 			float: left;
 
+			a {
+				display: block;
+				text-decoration: none;
+			}
+
 			@media #{$medium-up} {
 				width: 18%;
 				display: inline-block;
@@ -36,29 +41,24 @@
 			}
 
 			@media #{$xlarge-up} {
-				width: percentage(1/9);
+				width: percentage(1/10);
 				display: block;
 				float: left;
+			}
+
+			&:last-child {
+				// Hack to align last logo center on small devices. 
+				// Remove when you have 2, 5, 8, 11 logos. 
+				float: none;
+				display: inline-block;
 			}
 		}
 	}
 
 	h3 {
 		text-transform: uppercase;
-		font-size: 12px;
 		margin-bottom: 2.4em;
-
-		@media #{$medium-up} {
-			font-size: 18px;
-		}
-
-		@media #{$large-up} {
-			font-size: 22px;
-		}
-
-		@media #{$xlarge-up} {
-			font-size: 20px;
-		}
+		@include resFontSize(12px, 18px, 22px, 20px);
 	}
 
 	img {
@@ -75,5 +75,49 @@
 		@media #{$xlarge-up} {
 			width: auto;
 		}
+	}
+
+	.technologies-page & {
+		background: white;
+
+		&.add-ons {
+			background: $greyLight;
+		}
+
+		.technologies__item {
+
+			img {
+				width: 96px;
+				margin-top: 1em;
+
+				@media #{$medium-up} {
+					width: 120px;			
+				}
+
+				@media #{$large-up} {
+					width: 160px;			
+				}
+
+				@media #{$xlarge-up} {
+					width: auto;
+				}
+			}
+
+			h2 {
+				text-transform: uppercase;
+				@include resFontSize(24px, 28px, 35px, 45px);
+			}
+
+			h3 {
+				@include resFontSize(14px, 15px, 22px, 26px);
+				margin-bottom: .5rem;
+			}
+
+			p {
+				@include resFontSize(15px, 16px, 20px, 22px);
+				font-weight: 300;
+				line-height: 1.6;
+			}
+		}	
 	}
 }

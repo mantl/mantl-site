@@ -1,0 +1,48 @@
+.back2top {	
+	border: none;
+	background: transparent;
+	text-transform: uppercase;
+	position: relative;
+	padding-top: 64px;
+	color: #bbbdbf;
+	font-family: $headFont;
+	font-weight: 500;
+	font-size: 20px;
+	@include transition();
+	opacity: .7;
+
+	&:before {
+		content: "";
+		@include mantlIcon(10,44px 44px 66px 80px);
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -22px;
+
+		@media #{$large-up} {
+			margin-left: -33px;	
+		}
+
+		@media #{$xlarge-up} {
+			margin-left: -40px;	
+		}
+	}
+
+	@media #{$large-up} {
+		padding-top: 96px;
+		font-size: 27px;
+	}
+
+	@media #{$xlarge-up} {
+		padding-top: 120px;
+		font-size: 34px;
+	}
+
+	&:focus {
+		outline: 0;
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+}

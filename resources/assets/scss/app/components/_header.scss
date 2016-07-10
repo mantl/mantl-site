@@ -2,8 +2,14 @@ header {
 	height: 50px;
 	position: absolute;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
+    box-shadow: inset 0 -9px 12px -14px $black;
 
+    .download-page & {
+    	background: transparent url($gradients + 'hero.svg') no-repeat center center;
+		background-size: cover;
+    }
+    
     @media #{$medium-up} {
     	height: 60px;
     	padding: 0 .9375rem 0 0;
@@ -12,44 +18,80 @@ header {
     @media #{$large-up} {
     	height: 90px;
     }
+
+    @media #{$xlarge-up} {
+    	height: 140px;
+    }
     
     .fixed-header & {
     	position: fixed;
     	background: white;
+
+    	@media #{$medium-up} {
+    		
+    		a {
+			
+				&.active {
+					color: $grey;
+				}
+
+				&:hover {
+					color: $grey;
+				}
+			}
+    	}
     }
 
     .release-header & {
-    	background: transparent;
+    	//background: inherit;
     }
 
 	.logo {
 		position: absolute;
-		right: 0;
-		top: 0;
-		background: transparent url($imgs + 'logos/mantl-small.svg') no-repeat center center;
+		right: .9375rem;
+		top: 10px;
 		display: block;
-		width: 50px;
-		height: 50px;
 		text-indent: -9999px;
+		@include mantlIcon(11, 30px);
 
 		@media #{$medium-up} {
 			background: transparent url($imgs + 'logos/mantl-header.svg') no-repeat center center;
 			background-size: cover;
-			height: 40px;
-			width: 102px;
+			height: 35px;
+			width: 87px;
 			right: auto;
 			top: auto;
 			position: relative;
 			z-index: 100;
-			margin-top: 10px;
+			margin-top: 16px;
 		}
 
 		@media #{$large-up} {
 			height: 50px;
 			width: 126px;
-			margin-top: 20px;
+			margin-top: 25px;
+		}
+
+		@media #{$xlarge-up} {
+			height: 70px;
+			width: 177px;
+			margin-top: 42px;
 		}
 	}
+}
+
+.home-page {
+
+	header .logo {
+		display: none;
+	}
+	
+	&.fixed-header header {
+    	
+    	.logo {
+    		display: block;
+    	}
+    }
 }
 
 .menu {
@@ -75,7 +117,10 @@ header {
 		background: none;
 
 		li {
-			display: inline-block;
+			display: inline-block!important;
+		}
+
+		a {
 			line-height: 60px;
 		}
 	}
@@ -84,8 +129,16 @@ header {
 		height: 90px;
 		padding: 0 .9375rem 0 126px;
 
-		li {
+		a {
 			line-height: 90px;
+		}
+	}
+
+	@media #{$xlarge-up} {
+		height: 140px;
+
+		a {
+			line-height: 140px;
 		}
 	}
 
@@ -96,7 +149,7 @@ header {
 			font-size: 12px;
 			display: block;
 			float: right;
-			padding-right: 200px;
+			padding-right: 150px;
 			height: 60px;
 
 			a {
@@ -113,6 +166,12 @@ header {
 
 			}
 		}
+
+		@media #{$xlarge-up} {
+			font-size: 22px;
+			height: 140px;
+			padding-right: 200px;		
+		}
 	}
 
 	.side {
@@ -123,19 +182,28 @@ header {
 			margin-top: 0;
 			position: absolute;
 			right: .9375rem;
-			top: 10px;
+			top: 15px;
 		}
 
 		@media #{$large-up} {
-			top: 25px;
+			top: 30px;
+		}
+
+		@media #{$xlarge-up} {
+			top: 50px;
 		}
 	}
 
 	a {
 		color: $black;
 		text-decoration: none;
+		@include transition();
 
 		&.active {
+			color: white;
+		}
+
+		&:hover {
 			color: white;
 		}
 	}

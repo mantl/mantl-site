@@ -12,7 +12,7 @@
 
         <meta name="description" content="">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 
         <link rel="stylesheet" href="static/css/style.min.css">
 
@@ -20,7 +20,7 @@
 		
     </head>
 
-    <body>
+    <body class="{{ isset($pageClass) ? $pageClass.'-page' : 'default-page' }}">
         
         @include('components.header', ["pageID" => $pageID])
 
@@ -34,7 +34,7 @@
                         
                         <div class="columns small-12">
                             
-                            <h1>@yield('page-header')</h1>
+                            @yield('page-header')
 
                         </div>
 
@@ -64,16 +64,6 @@
                     $(data).each(function(index, item) {
                         var html = "<li><a target='_blank' href='" + item.url + "'><span>" + item.title + "</span> " + item.date + "</a></li>";
                         $(".blog-feed.mantl ul").append(html);
-                    });
-                }
-            });
-
-            $.ajax({
-                url : "{{ url('feed/events') }}",
-                success : function (data) {
-                    $(data).each(function(index, item) {
-                        var html = "<li><a target='_blank' href='" + item.url + "'><span>" + item.title + "</span> " + item.date + "</a></li>";
-                        $(".blog-feed.events ul").append(html);
                     });
                 }
             });

@@ -43,3 +43,32 @@
 		-webkit-text-stroke: #{$width}px $color;
 	}
 }
+
+@mixin resFontSize($smallFont, $mediumFont, $largeFont, $xLargeFont) {
+
+	@if ($smallFont) {
+    	font-size: $smallFont;
+  	}
+
+  	@if ($mediumFont) {
+    	
+    	@media #{$medium-up} {
+    		font-size: $mediumFont;
+    	}
+  	}
+
+  	@if ($largeFont) {
+    	
+    	@media #{$large-up} {
+    		font-size: $largeFont;
+    	}
+  	}
+
+  	@if ($xLargeFont) {
+    	
+    	@media #{$xlarge-up} {
+    		font-size: $xLargeFont;
+    	}
+  	}
+
+}

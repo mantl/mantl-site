@@ -16,55 +16,50 @@ footer {
 
 	h5 {
 		color: white;
-		font-size: 14px;
 		text-transform: uppercase;
-
-		@media #{$medium-up} {
-			font-size: 18px;		
-		}
-
-		@media #{$large-up} {	
-			font-size: 25px;
-		}	
-
-		@media #{$xlarge-up} {
-			font-size: 30px;
-		}
+		@include resFontSize(14px, 18px, 25px, 30px);
 	}
 
 	ul {
 		margin-bottom: 20px;
 
 		a {
-			text-transform: uppercase;
-			font-size: 12px;
+			//text-transform: uppercase;
 			font-weight: 300;
 			color: $greyMedium;
 			text-decoration: none;
 
+			@include resFontSize(12px, 13px, 20px, 22px);
+
+			&:hover {
+				color: white;
+			}
+
 			span {
 				font-weight: 500;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 1; /* number of lines to show */
+				//line-height: 1em;        /* fallback */
+				//max-height: 1em;       /* fallback */
 			}
 
 			@media #{$medium-up} {
-				font-size: 13px;
 
 				span {
-					display: block;
+					display: -webkit-box;
 				}		
 			}
-
-			@media #{$large-up} {	
-				font-size: 20px;
-			}
-
-			@media #{$xlarge-up} {
-				font-size: 22px;
-			}	
 		}
 	}
 
 	.blog-feed {
+
+		li {
+			margin-bottom: 10px;
+		}
 
 		@media #{$medium-up} {
 

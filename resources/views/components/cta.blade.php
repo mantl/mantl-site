@@ -8,11 +8,11 @@
 
 			@if ($pageID === 0)
 
-			<button class="button button-gradient">Download now for free</button>
+			<a class="button button-gradient" href="{{ url('download') }}">Download now for free</a>
 
 			@else 
 
-			<button class="button button-alt">Download now for free</button>			
+			<a class="button button-alt" href="{{ url('download') }}">Download now for free</a>			
 
 			@endif
 

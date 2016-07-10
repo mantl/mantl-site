@@ -11,6 +11,10 @@
 		padding: 90px 0 0 0;
 	}
 
+	@media #{$xlarge-up} {
+		padding: 140px 0 0 0;
+	}
+
 	.button-group {
 		padding-bottom: 25px;
 
@@ -18,13 +22,25 @@
 			padding-bottom: 60px;
 		}
 	}
+}
 
-	.download__example {
-		background: white;
-		padding: 35px 0;
+.download__example {
+	background: white;
+	padding: 35px 0;
 
-		@media #{$large-up} {
-			padding: 70px 0;
-		}
+	@media #{$large-up} {
+		padding: 70px 0;
+	}
+
+	h3 {
+		text-transform: uppercase;
+		@include resFontSize(16px, 18px, 25px, 30px);
+	}
+
+	p {
+		@include resFontSize(15px, 16px, 20px, 22px);
+		font-weight: 300;
+		line-height: 1.6;
 	}
 }
+

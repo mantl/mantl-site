@@ -20,7 +20,7 @@
 			        
 			        <li><a href="{{ url('/faq') }}" @if($pageID == 4) class="active" @endif>FAQ</a></li>
 			        
-			        <li><a href="{{ url('/download') }}" @if($pageID == 5) class="active" @endif>Download</a></li>
+			        <li class="show-for-medium-up"><a href="{{ url('/download') }}" @if($pageID == 5) class="active" @endif>Download</a></li>
 			        
 			    </ul>
 
