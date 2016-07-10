@@ -19,7 +19,7 @@ RUN apt-get install -y ruby
 RUN gem install sass
 RUN /usr/local/bin/composer install -n -d /apps/mantl
 RUN /serve.sh mantl.io /apps/mantl/public
-RUN /serve.sh mantl.dev /apps/mantl/public
+RUN /serve.sh www.mantl.io /apps/mantl/public
 RUN cd /apps/mantl && php artisan key:generate
 RUN cd /apps/mantl/resources/assets && npm update && bower --allow-root install && grunt build
 RUN chown -R homestead /apps/mantl
