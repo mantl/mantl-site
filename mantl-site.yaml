@@ -1,0 +1,41 @@
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: mantl-site
+  namespace: mantl-site
+  labels:
+    name: mantl-site
+spec:
+  replicas: 5
+  template:
+    metadata:
+      name: mantl-site
+      labels:
+        name: mantl-site
+    spec:
+      containers:
+        - name: mantl-site
+          image: shippedrepos-docker-fcn-deploy-dev.bintray.io/mantlio
+          imagePullPolicy: Always
+          ports:
+            - name: mantl-http
+              containerPort: 80
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: mantl-site
+  namespace: mantl-site
+  labels:
+    name: mantl-site
+spec:
+  ports:
+  - name: web
+    port: 80
+    targetPort: mantl-http
+    protocol: TCP
+  selector:
+    name: mantl-site
+  type: LoadBalancer
