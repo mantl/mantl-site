@@ -1,0 +1,47 @@
+$sprite: url($imgs + 'icons/responsive-sprite.svg');
+//$percentage: 80px;
+
+@mixin mantlIcon($position, $size) {
+	display: inline-block;
+	background: transparent $sprite no-repeat 0 0;
+	background-size: auto 100%;
+
+    $iconSize: nth($size, 1);
+
+    width: $iconSize;
+    height: $iconSize;
+    background-position: -($position * $iconSize) 0;
+
+  	@if length($size) > 1 {
+    	
+    	$iconSize: nth($size, 2);
+
+    	@media #{$medium-up} {
+	    	width: $iconSize;
+		    height: $iconSize;
+		    background-position: -($position * $iconSize) 0;
+	    }
+  	}
+
+  	@if length($size) > 2 {
+    	
+    	$iconSize: nth($size, 3);
+
+    	@media #{$large-up} {
+	    	width: $iconSize;
+		    height: $iconSize;
+		    background-position: -($position * $iconSize) 0;
+	    }
+  	}
+
+  	@if length($size) > 3 {
+    	
+    	$iconSize: nth($size, 4);
+
+    	@media #{$xlarge-up} {
+	    	width: $iconSize;
+		    height: $iconSize;
+		    background-position: -($position * $iconSize) 0;
+	    }
+  	}
+}

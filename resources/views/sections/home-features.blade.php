@@ -21,7 +21,7 @@
 			class="active"
 		>
 			
-			@include('components.feature', ['features' => $devops_features])
+			@include('components.feature-home', ['features' => $devops_features])
 
 		</div>
 
@@ -32,7 +32,7 @@
 			data-tab-name="business-features" 
 		>
 		
-			@include('components.feature', ['features' => $business_features])
+			@include('components.feature-home', ['features' => $business_features])
 
 		</div>
 
@@ -42,7 +42,7 @@
 					
 		<div class="columns small-12">
 			
-			<a class="button" href="#">Explore Mantl features</a>
+			<a class="button" href="{{ url('features') }}">Explore Mantl features</a>
 
 		</div>
 

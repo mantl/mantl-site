@@ -7,78 +7,22 @@
 		<div class="columns small-12">
 			
 			<ul>
+
+				@foreach ($technologies as $index => $tech)
 		
 				<li>
 					
-					<img src="{{ asset('static/imgs/technologies/consul.png') }}">
-					
-					<h3>Consul</h3>
+					<a href="{{ $tech['url'] }}" target="_blank">
+
+						<img src="{{ asset('static/imgs/technologies/'.$tech['icon']) }}">
+						
+						<h3>{{ $tech['name'] }}</h3>
+
+					</a>
 
 				</li>
-				
-				<li>
-					
-					<img src="{{ asset('static/imgs/technologies/docker.png') }}">
-					
-					<h3>Docker</h3>
 
-				</li>
-				
-				<li>
-					
-					<img src="{{ asset('static/imgs/technologies/ansible.png') }}">
-					
-					<h3>Ansible</h3>
-
-				</li>
-				
-				<li>
-					
-					<img src="{{ asset('static/imgs/technologies/kubernetes.png') }}">
-					
-					<h3>Kubernetes</h3>
-
-				</li>
-				
-				<li>
-					
-					<img src="{{ asset('static/imgs/technologies/traefik.png') }}">
-					
-					<h3>Traefik</h3>
-
-				</li>
-				
-				<li>
-					
-					<img src="{{ asset('static/imgs/technologies/marathon.png') }}">
-					
-					<h3>Marathon</h3>
-
-				</li>
-				
-				<li>
-					
-					<img src="{{ asset('static/imgs/technologies/vault.png') }}">
-					
-					<h3>Vault</h3>
-
-				</li>
-				
-				<li>
-					
-					<img src="{{ asset('static/imgs/technologies/terraform.png') }}">
-					
-					<h3>Terraform</h3>
-
-				</li>
-				
-				<li>
-					
-					<img src="{{ asset('static/imgs/technologies/mesos.png') }}">
-					
-					<h3>Mesos</h3>
-
-				</li>
+				@endforeach
 
 			</ul>
 
