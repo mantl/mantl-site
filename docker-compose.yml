@@ -1,0 +1,22 @@
+web:
+    image: ba9b0e37d551
+    restart: always
+    ports:
+        - "8000:80" # web
+        - "2222:22" # ssh
+        - "35729:35729" # live reload
+        - "9876:9876" # karma server
+
+    links:
+        - mariadb
+
+mariadb:
+    image: tutum/mariadb
+    restart: always
+    ports:
+        - "33060:3306"
+    environment:
+        MARIADB_USER: admin # cannot be changed ( for info. only )
+        MARIADB_PASS: Vs8jSA95MuvaiwScksbf778L
+    volumes:
+        - ~/apps/volumes/mysql:/var/lib/mysql # database files
