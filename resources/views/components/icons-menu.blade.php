@@ -1,6 +1,6 @@
 <ul class="side icons-menu">
-                
-    <li><a class="dc" href="https://github.com/CiscoCloud/mantl/tree/master/docs" target="_blank">Docs</a></li>
+
+    <li><a class="dc" href="http://mantl.readthedocs.io" target="_blank">Docs</a></li>
 
     <li><a class="gi" href="https://github.com/CiscoCloud/mantl" target="_blank">GitHub</a></li>
 
