@@ -1,5 +1,5 @@
 <?php
-	
+
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
@@ -56,7 +56,7 @@ class Content extends Model
 	            'content' => 'Deploy all your services in one go. The Mantl framework provisions both infrastructure and software as code allowing you to deploy your services and applications in a repeatable and automated manner. Integrated components like Ansible (brings up nodes and clusters), and Terraform (provisions virtual machines), ensure that the installation of all components goes smoothly, saving you the hassle.',
 	            'cta_text' => 'Get started with Mantl',
 	            'cta_url' => 'https://www.youtube.com/watch?v=3f8c3o6RfYc'
-	        ], 
+	        ],
     	]);
     }
 
@@ -64,7 +64,7 @@ class Content extends Model
     public static function businessFeatures() {
 
     	return collect([
-    		
+
 	        [
 	            'title' => 'Designed for DevOps',
 	            'icon' => 'designed-for-devops.svg',
@@ -121,7 +121,7 @@ class Content extends Model
     public static function technologies() {
 
     	return collect([
-    		
+
 	        [
 	            'name' => 'Consul',
 	            'subtitle' => 'Service Discovery and Configuration',
@@ -199,7 +199,7 @@ class Content extends Model
     public static function addons() {
 
     	return collect([
-    		
+
 	        [
 	            'name' => 'GlusterFS',
 	            'subtitle' => '',
@@ -242,12 +242,6 @@ class Content extends Model
     			'url' => 'https://youtu.be/tabvIueU0bI',
     			'title' => 'Mantl overview',
     			'summary' => 'An overview for anyone interested in learning more about Mantl.'
-    		],
-    		[
-    			'tags' => 'video docs',
-    			'url' => 'http://event.on24.com/wcc/r/1155018/1622C39AD52660C4429FC40A9DE9ABF',
-    			'title' => 'Mantl and Microservices webinar',
-    			'summary' => 'Learn all about containers and microservices and how they relate to Mantl.'
     		],
     		[
     			'tags' => 'video',
