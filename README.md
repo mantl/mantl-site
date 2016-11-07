@@ -56,6 +56,6 @@ NAME         CLUSTER-IP      EXTERNAL-IP      PORT(S)   AGE
 mantl-site   10.159.253.43   104.196.119.13   80/TCP    57m
 ```
 
-This is currently hosted on the ManagedPaaS Google GKE cluster (@ldejager @mdainty @matjohn2 for details). We can easily put this wherever in future if a move is needed.
+This is currently hosted on a Google GKE cluster. We can easily put this wherever in future if a move is needed.
 
-Any issues/changes, please shout @matjohn2
+Any issues/changes, PR's or requests to deploy new versions, currently please shout @matjohn2
