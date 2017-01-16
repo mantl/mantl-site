@@ -16,26 +16,9 @@ spec:
     spec:
       containers:
         - name: mantl-site
-          image: shippedrepos-docker-fcn-deploy-dev.bintray.io/mantlio
+          image: trxuk/mantlio:10.0
           imagePullPolicy: Always
           ports:
             - name: mantl-http
               containerPort: 80
 
----
-kind: Service
-apiVersion: v1
-metadata:
-  name: mantl-site
-  namespace: mantl-site
-  labels:
-    name: mantl-site
-spec:
-  ports:
-  - name: web
-    port: 80
-    targetPort: mantl-http
-    protocol: TCP
-  selector:
-    name: mantl-site
-  type: LoadBalancer

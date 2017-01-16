@@ -1,0 +1,17 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: mantl-site-svc
+  namespace: mantl-site
+  labels:
+    name: mantl-site-svc
+spec:
+  ports:
+  - name: web
+    port: 80
+    targetPort: mantl-http
+    protocol: TCP
+  selector:
+    name: mantl-site
+  type: LoadBalancer
