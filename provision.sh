@@ -66,17 +66,17 @@ su homestead <<'EOF'
 EOF
 
 # Set Some PHP CLI Settings
-sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/7.0/cli/php.ini
-sed -i "s/display_errors = .*/display_errors = On/" /etc/php/7.0/cli/php.ini
-sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/7.0/cli/php.ini
-sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/7.0/cli/php.ini
+sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/7.1/cli/php.ini
+sed -i "s/display_errors = .*/display_errors = On/" /etc/php/7.1/cli/php.ini
+sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/7.1/cli/php.ini
+sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/7.1/cli/php.ini
 
-sed -i "s/.*daemonize.*/daemonize = no/" /etc/php/7.0/fpm/php-fpm.conf
-sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/7.0/fpm/php.ini
-sed -i "s/display_errors = .*/display_errors = On/" /etc/php/7.0/fpm/php.ini
-sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php/7.0/fpm/php.ini
-sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/7.0/fpm/php.ini
-sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/7.0/fpm/php.ini
+sed -i "s/.*daemonize.*/daemonize = no/" /etc/php/7.1/fpm/php-fpm.conf
+sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/7.1/fpm/php.ini
+sed -i "s/display_errors = .*/display_errors = On/" /etc/php/7.1/fpm/php.ini
+sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php/7.1/fpm/php.ini
+sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/7.1/fpm/php.ini
+sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php/7.1/fpm/php.ini
 
 # Enable Remote xdebug
 #echo "xdebug.remote_enable = 1" >> /etc/php/7.0/fpm/conf.d/20-xdebug.ini
@@ -96,16 +96,18 @@ sed -i "s/user www-data;/user homestead;/" /etc/nginx/nginx.conf
 sed -i "s/# server_names_hash_bucket_size.*/server_names_hash_bucket_size 64;/" /etc/nginx/nginx.conf
 
 mkdir -p /run/php
-touch /run/php/php7.0-fpm.sock
-sed -i "s/user = www-data/user = homestead/" /etc/php/7.0/fpm/pool.d/www.conf
-sed -i "s/group = www-data/group = homestead/" /etc/php/7.0/fpm/pool.d/www.conf
-sed -i "s/;listen\.owner.*/listen.owner = homestead/" /etc/php/7.0/fpm/pool.d/www.conf
-sed -i "s/;listen\.group.*/listen.group = homestead/" /etc/php/7.0/fpm/pool.d/www.conf
-sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/7.0/fpm/pool.d/www.conf
+touch /run/php/php7.1-fpm.sock
+sed -i "s/user = www-data/user = homestead/" /etc/php/7.1/fpm/pool.d/www.conf
+sed -i "s/group = www-data/group = homestead/" /etc/php/7.1/fpm/pool.d/www.conf
+sed -i "s/;listen\.owner.*/listen.owner = homestead/" /etc/php/7.1/fpm/pool.d/www.conf
+sed -i "s/;listen\.group.*/listen.group = homestead/" /etc/php/7.1/fpm/pool.d/www.conf
+sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/7.1/fpm/pool.d/www.conf
 
 # Install Node
 curl --silent --location https://deb.nodesource.com/setup_6.x | bash -
 apt-get install -y nodejs
+npm install -g minimatch
+npm install -g graceful-fs
 npm install -g grunt-cli
 npm install -g gulp
 npm install -g bower
@@ -123,6 +125,9 @@ sed -i "s/#START=yes/START=yes/" /etc/default/beanstalkd
 # Redis
 apt-get install -y redis-server
 sed -i "s/daemonize yes/daemonize no/" /etc/redis/redis.conf
+
+# PHP 7.1 FPM Symlink
+ln -s /usr/sbin/php-fpm7.1 /usr/sbin/php-fpm7.0
 
 # Configure default nginx site
 block="server {
@@ -152,7 +157,7 @@ block="server {
 
     location ~ \.php$ {
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+        fastcgi_pass unix:/run/php/php7.1-fpm.sock;
         fastcgi_index index.php;
         include fastcgi.conf;
     }
