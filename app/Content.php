@@ -296,7 +296,7 @@ class Content extends Model
     		[
     			'question' => 'How does Mantl compare to Kubernetes?',
     			'answer' => '<p>Kubernetes is an open source orchestration system for Docker containers. It handles scheduling onto nodes in a compute cluster and actively manages workloads to ensure that their state matches the users declared intentions. Using the concepts of "labels" and "pods", it groups the containers which make up an application into logical units for easy management and discovery.</p>
-    			<p>Mantl is an end-to-end solution for deploying and managing a microservices infrastructure. Mantl currently uses <a href="http://mesos.apache.org">Apache Mesos</a> as a cluster manager for microservices. The Mantl team is in the process of evaluating Kubernetes as a cluster manager.</p>'
+    			<p>Mantl is an end-to-end solution for deploying and managing a microservices infrastructure. Mantl currently uses <a href="http://mesos.apache.org">Apache Mesos</a> as a cluster manager for microservices. The Mantl team is planning on having Kubernetes side by side in 2.0.</p>'
     		]
     	]);
     }
